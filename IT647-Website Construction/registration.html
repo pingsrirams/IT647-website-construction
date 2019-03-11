@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SNHU-a-Palooza The Concert</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["FirstName"].value;
+                var y = document.forms["myForm"]["LastName"].value;
+                var z = document.forms["myForm"]["Email"].value;
+                if (x == null || x == ""|| y == null || y == "" || z == null || z == "") {
+                    alert("You must insert a name");
+                    return false;
+                }
+                
+                if ( document.myForm.PhoneNum.value == "" ||
+                   isNaN( document.myForm.PhoneNum.value ) ||
+                        document.myForm.PhoneNum.value.length != 10 )
+                {
+                    alert( "Please provide a phone number in the format ##########." );
+                    document.myForm.PhoneNum.focus();
+                    return false;
+                }
+            }
+        </script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Home</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="events.html">Events</a></li>
+								<li><a href="registration.html">Registration</a></li>
+								<li><a href="confirmation.html">Confirmation</a></li>
+                                <!-- <li><a href="map.html">Map</a></li> -->
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="events.html">
+											<h3>Events</h3>
+											<p>SNHU-A-PALOOZA THE CONCERT WILL ROCK YOUR WORLD AND BLOW YOUR MIND.</p>
+										</a>
+									</li>
+									<li>
+										<a href="registration.html">
+											<h3>Registration</h3>
+											<p>Register Now!</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<!-- <section>
+								<ul class="actions vertical">
+									<li><a href="#" class="button big fit">Log In</a></li>
+								</ul>
+							</section> -->
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">REGISTER NOW!</a></h2>
+										<p>Fill in the following fields to register for your concert code!</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2018-09-07">September 7, 2018</time>
+										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar_guitar.jpg" alt="Avatar Guitar" /></a>
+									</div>
+								</header>
+								<a href="#" class="image featured"><img src="images/Pic01Main.jpg" border=0 alt="Concert in the Park" /></a>
+                                <br><br>
+                                <!-- Form Fields -->
+                                    <form action="/regForm.php" method="post" name="myForm" onsubmit="return validateForm()">
+                                        <p>First Name: <input type="text" name="FirstName" /></p>
+                                        <p>Last Name: <input type="text" name="LastName" /></p>
+                                        <p>Phone Number: <input type="text" name="PhoneNum" /></p>
+                                        <p>Email: <input type="text" name="Email" /></p>
+                                        <input type="submit" value="Submit" />
+                                    </form>
+                                <!-- End of Form Fields -->
+                                <br><br>
+                               
+								<!-- <p>The city of Woodstock, NY is preparing to start a new open concert series, SNHU-a-palooza. 
+                                   The concerts will run on the first Friday of every month in a farmer’s field. 
+                                   Admission to the concerts will be free, but the city wants to limit the attendance to 50,000 people, given that previous events with a larger audience caused significant damage to the farm. 
+                                   Toward this end, the city is requiring that interested individuals be registered as attending the event.</p>
+                                <p>Registered users will need a printout of their confirmation, which will contain a control number to ensure that the number of people at these events remains at acceptable levels. 
+                                   Concert staff will check in attendants at the park entrance utilizing tablets. Website users will also only register for single events.</p>
+                                <p><b>HURRY UP!!!!! Below you can see our calendar for registration and past concert images in our arena</b></p> -->
+								<!-- <footer>
+									<ul class="actions">
+										<li><a href="events.html" class="button big">More Details</a></li>
+									</ul>
+									<ul class="stats">
+										<li><a href="#">General</a></li>
+										<li><a href="#" class="icon fa-heart">28</a></li>
+										<li><a href="#" class="icon fa-comment">128</a></li>
+									</ul>
+								</footer> -->
+							</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<a href="#" class="logo"><img src="images/snhu logo.jpg" border=0 alt="Home Page Logo" /></a>
+								<header>
+									<h2>Registration Page</h2>
+									<!-- <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p> -->
+								</header>
+							</section>
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://twitter.com/SNHU" class="fa-twitter" alt="twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/pg/snhuarena/events" class="fa-facebook" alt="facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/snhu" class="fa-instagram"><span class="label" alt="instagram">Instagram</span></a></li>
+									<li><a href="https://www.snhu.edu/about-us/news-and-events" class="fa-rss"><span class="label" alt="RSS feeds">RSS</span></a></li>
+									<!-- <li><a href="media@snhu.edu" class="fa-envelope"><span class="label">Email</span></a></li> -->
+								</ul>
+								<p class="copyright">&copy; copyright 2018 <a href="https://www.snhu.edu">Southern New Hampshire University | 2500 North River Road Manchester NH 03106. <!-- </a>. Images: <a href="http://unsplash.com">Unsplash</a>.--> </p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
